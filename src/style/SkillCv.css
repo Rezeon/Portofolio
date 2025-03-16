@@ -32,3 +32,18 @@
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 479px) {
+    .awl{
+        gap: 20px;
+    }
+    .cde{
+        margin: 10px;
+        gap: 50px;
+    }
+    .mycode{
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+        padding: 7px;
+    }
+}

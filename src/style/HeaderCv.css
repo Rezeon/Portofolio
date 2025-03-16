@@ -54,3 +54,32 @@ header{
     align-items: center;
     display: flex;
 }
+@media (max-width: 479px) {
+    header{
+        width: 90%;
+        height: 60px;
+        gap: 20%;
+        border-radius: 60px;
+        margin-left: 20px;
+        margin-top: 30px;
+    }
+    .pilihan{
+        gap: 9px;
+    }
+    .home{
+        font-size: 12px;
+        width: 60px;
+        height: 20px;
+        border-radius: 10px;
+        font-weight: 400;
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
+    }
+    .logo img{
+        width: 30px;
+        height: 30px;
+    }
+
+}

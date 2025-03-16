@@ -1,0 +1,34 @@
+.awl{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.skill{
+    font-size: 20px;
+    font-weight: bold;
+}
+.cde{
+    display: flex;
+    align-items: center;
+    margin: 40px;
+    gap: 100px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.mycode{
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px;
+    border: 10px #4D77FF solid;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

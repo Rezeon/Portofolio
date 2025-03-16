@@ -1,0 +1,56 @@
+header{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-around;
+    gap: 480px;
+    position: fixed;
+    border-radius: 80px;
+    z-index: 9;
+    margin-left: 125px;
+    margin-top: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.pilihan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.home{
+    font-size: 16px;
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.home:hover{
+    background-color: #56BBF1;
+}
+.home:focus{
+    background-color: #4D77FF;
+    color: white;
+}
+.home:focus:hover{
+    background-color: #56BBF1;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px black solid;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

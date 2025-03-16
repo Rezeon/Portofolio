@@ -4,6 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  base: 'https://rezeon.github.io/Portofolio/',
   resolve: {
     alias: {
       'pdfjs-dist': path.resolve(__dirname, 'node_modules/pdfjs-dist'),

@@ -21,7 +21,7 @@ import reactjs from '../assets/pdf/react js.pdf?url';
 import vuejs from '../assets/pdf/vue js.pdf?url';
 
 function SertivCv () {
-    const defaultLayoutPluginInstance = defaultLayoutPlugin();
+     const defaultLayoutPluginInstance = defaultLayoutPlugin();
     return(
         <div>
             <div className="judul">Sertifikat</div>

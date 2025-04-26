@@ -6,12 +6,12 @@ function ContactCv() {
         <section id="contact">
         <div className="contact">
             <button className='contak' onClick={() => window.open("https://wa.me/086542883416", "_blank")}>
-                <img src={phone} alt="" className='imgvv' />
+                <img src={phone}  />
                 Phone
             </button>
 
             <button className='contak' onClick={() => window.location.href = "mailto:Rheynoternando@gmail.com"}>
-                <img src={mail} alt="" className='imgvv' />
+                <img src={mail}  />
                 Email
             </button>
         </div>

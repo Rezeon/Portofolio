@@ -5,6 +5,7 @@ import HeaderCv from "./components/HeaderCv";
 import MoreCv from "./components/MoreCv";
 import SertivCv from "./components/SertivCv";
 import SkillCv from "./components/SkillCv";
+import ProjectGithub from "./components/ProjectGithub";
 
 function App() {
  
@@ -17,6 +18,7 @@ function App() {
     </section>
     <section id="Sertif">
       <SertivCv />
+      <ProjectGithub />
     </section>
     <section id="skill">
       <SkillCv />

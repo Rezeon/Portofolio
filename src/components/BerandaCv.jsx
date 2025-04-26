@@ -1,4 +1,4 @@
-import Me from '../assets/Me.png'
+import Me from '../assets/me3.png'
 import git from '../assets/github.png'
 import insta from '../assets/instagram.png'
 import linked from '../assets/linkedin.png'

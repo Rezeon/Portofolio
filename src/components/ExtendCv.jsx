@@ -17,15 +17,15 @@ function ExtendCv() {
                     <img src={dataB} alt="" />
                     <div className="hayj">Data Scientist</div>
                     <div className="hayd">
-                        I have experience in Autodesk, AutoCAD, and SolidWorks for designing and visualizing 3D models. 
-                        Skilled in creating detailed technical designs for manufacturing and product presentations.</div>
+                        I am proficient in Python, R, and SQL for data analysis, with expertise in Pandas, NumPy, and scikit-learn for data processing, machine learning, and visualization using Matplotlib & Seaborn. 
+                        I have worked on various projects, including spam detection, house price analysis, stock market prediction, and sentiment analysis.</div>
                 </div>
                 <div className="hayk3">
                     <img src={tigaD} alt="" />
                     <div className="hayj">3D Modeling & Product Design</div>
                     <div className="hayd">
-                        I am proficient in Python, R, and SQL for data analysis, with expertise in Pandas, NumPy, and scikit-learn for data processing, machine learning, and visualization using Matplotlib & Seaborn. 
-                        I have worked on various projects, including spam detection, house price analysis, stock market prediction, and sentiment analysis.</div>
+                        I have experience in Autodesk, AutoCAD, and SolidWorks for designing and visualizing 3D models. 
+                        Skilled in creating detailed technical designs for manufacturing and product presentations.</div>
                 </div>
             </div>
             <div className="whyme">

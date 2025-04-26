@@ -19,6 +19,7 @@ import php from '../assets/pdf/php.pdf?url';
 import phpsql from '../assets/pdf/php&mysql.pdf?url';
 import reactjs from '../assets/pdf/react js.pdf?url';
 import vuejs from '../assets/pdf/vue js.pdf?url';
+import harisenin from '../assets/pdf/harisenin.pdf?url';
 
 function SertivCv () {
      const defaultLayoutPluginInstance = defaultLayoutPlugin();
@@ -26,6 +27,9 @@ function SertivCv () {
         <div>
             <div className="judul">Sertifikat</div>
             <div className="all">
+                <div className='pdfv'>
+                    <Viewer fileUrl={harisenin}  defaultScale={0.7} />
+                </div>
                 <div className='pdfv'>
                     <Viewer fileUrl={bootstrap}  defaultScale={0.7} />
                 </div>
@@ -62,7 +66,7 @@ function SertivCv () {
                 <div className='pdfv'>
                     <Viewer fileUrl={vuejs}  defaultScale={0.7} />
                 </div>
-            </div>
+            </div>        
         </div>
     )
 }

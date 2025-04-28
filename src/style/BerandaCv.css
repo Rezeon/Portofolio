@@ -71,7 +71,7 @@
     margin-top: 20px;
     font-weight: bold;
 }
-@media (max-width: 481px) {
+@media (max-width: 480px) {
     .hello{
         height: 700px;
     }

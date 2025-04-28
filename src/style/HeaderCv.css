@@ -53,7 +53,7 @@ header{
     align-items: center;
     display: flex;
 }
-@media (max-width: 480px) {
+@media (max-width: 481px) {
     header{
         width: 90%;
         height: 60px;

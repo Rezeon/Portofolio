@@ -40,7 +40,7 @@
     background-color: wheat;
     border-radius: 5px;
 }
-@media (max-width: 480px) {
+@media (max-width: 481px) {
     .sell{
         height: 600px;
     }

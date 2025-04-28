@@ -3,7 +3,7 @@
 }
 .selfp{
     width: 50%;
-    height: 942px;
+    height: 1000px;
     display: flex;
     justify-content: center;
     background-color: whitesmoke;
@@ -16,7 +16,7 @@
 }
 .hello{
     width: 50%;
-    height: 942px;
+    height: 1000px;
     display: flex;
     flex-direction: column;
     background-color: #f8f8f9;
@@ -84,5 +84,5 @@
     .name{
         font-size: 20px;
     }
-    
+
 }

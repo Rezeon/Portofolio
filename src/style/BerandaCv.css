@@ -9,7 +9,7 @@
     background-color: whitesmoke;
 }
 .selfp img {
-    width: 40%;
+    width: 50%;
     margin-top: 100px;
     position: absolute;
     bottom: -1;
@@ -71,8 +71,17 @@
     margin-top: 20px;
     font-weight: bold;
 }
-@media (max-width: 479px) {
+@media (max-width: 481px) {
+    .hello{
+        height: 700px;
+    }
+    .selfp{
+        height: 700px;
+    }
     .selfp img{
-        display: none;
+        margin-top: 180px;
+    }
+    .name{
+        font-size: 20px;
     }
 }

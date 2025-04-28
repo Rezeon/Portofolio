@@ -2,11 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px;
 }
 .contak{
-    width: 100px;
+    width: 50%;
     height: 70px;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,6 @@
     outline: none;
     border: none;
     border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: 700;
     font-size: 16px;
     padding: 40px;

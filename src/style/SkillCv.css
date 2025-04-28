@@ -32,9 +32,10 @@
     justify-content: center;
     align-items: center;
 }
-@media (max-width: 479px) {
+@media (max-width: 481px) {
     .awl{
         gap: 20px;
+        height: 400px;
     }
     .cde{
         margin: 10px;

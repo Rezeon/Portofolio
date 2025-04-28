@@ -65,3 +65,44 @@
     justify-content: center;
     display: flex;
 }
+@media (max-width: 481px) {
+    .project{
+        height: 180px;
+    }
+    .githubP{
+        width: 97%;
+        margin-left: 1.5%;
+        height: 120px;
+        border-radius: 5px;
+    }
+    .githubP img{
+        border-radius: 5px 0px 0px 5px;
+    }
+    .information{
+        gap: 4px;
+    }
+    .namaPro{
+        font-size: 12px;
+    }
+    .ketPro{
+        font-size: 8px
+    }
+    .goTo{
+        font-weight: 300;
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+        padding-top: 4px;
+        border-radius: 5px;
+
+    }
+    .web{
+        font-weight: 300;
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+        padding-top: 4px;
+        border-radius: 5px;
+    }
+
+}

@@ -5,12 +5,11 @@ header{
     align-items: center;
     background-color: white;
     justify-content: space-around;
-    gap: 480px;
     position: fixed;
     border-radius: 80px;
     z-index: 9;
-    margin-left: 125px;
-    margin-top: 30px;
+    margin-left: 10%;
+    margin-top: 25px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .pilihan{
@@ -54,13 +53,13 @@ header{
     align-items: center;
     display: flex;
 }
-@media (max-width: 479px) {
+@media (max-width: 481px) {
     header{
         width: 90%;
         height: 60px;
-        gap: 10%;
+        font-size: 14px;
+        margin-left: 5%;
         border-radius: 60px;
-        margin-left: 20px;
         margin-top: 30px;
     }
     .pilihan{

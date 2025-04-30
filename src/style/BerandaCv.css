@@ -1,27 +1,34 @@
-.aab{
+/* === Layout Flex Utama === */
+.aab {
     display: flex;
-}
-.selfp{
+    flex-direction: row;
+  }
+  
+  /* === Bagian Gambar === */
+  .selfp {
     width: 50%;
     height: 1000px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: whitesmoke;
-}
-.selfp img {
+  }
+  
+  .selfp img {
     width: 50%;
     margin-top: 100px;
-    position: absolute;
-    bottom: -1;
-}
-.hello{
+  }
+  
+  /* === Bagian Teks dan Konten === */
+  .hello {
     width: 50%;
     height: 1000px;
     display: flex;
     flex-direction: column;
     background-color: #f8f8f9;
-}
-.con{
+  }
+  
+  .con {
     margin-left: 1.5vw;
     margin-top: 40vh;
     display: flex;
@@ -29,25 +36,28 @@
     gap: 10px;
     width: auto;
     height: auto;
-}
-.name {
+  }
+  
+  .name {
     font-weight: bold;
     font-size: 30px;
     font-family: "Exo", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
-}
-.aboutme{
+  }
+  
+  .aboutme {
     font-size: 16px;
     font-weight: 500;
-}
-.btn {
+  }
+  
+  .btn {
     display: flex;
     gap: 20px;
-}
-.logosos{
+  }
+  
+  .logosos {
     height: 30px;
     width: 30px;
     background-color: white;
@@ -60,29 +70,52 @@
     cursor: pointer;
     font-weight: 600;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    
     transition: background-color 0.5s ease-in-out;
-}
-.logosos:hover{
+  }
+  
+  .logosos:hover {
     background-color: gray;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-}
-.app{
+  }
+  
+  .app {
     margin-top: 20px;
     font-weight: bold;
-}
-@media (max-width: 480px) {
-    .hello{
-        height: 700px;
+  }
+  
+  /* === Responsif untuk HP (max-width: 480px) === */
+  @media (max-width: 480px) {
+    .aab {
+      flex-direction: column;
     }
-    .selfp{
-        height: 700px;
+  
+    .selfp,
+    .hello {
+      width: 100%;
+      height: auto;
     }
-    .selfp img{
-        margin-top: 180px;
+  
+    .selfp img {
+      width: 70%;
+      margin-top: 100px;
+      position: relative;
     }
-    .name{
-        font-size: 20px;
+  
+    .hello {
+      padding: 20px;
     }
-
-}
+  
+    .con {
+      margin-left: 10px;
+      margin-top: 40px;
+    }
+  
+    .name {
+      font-size: 22px;
+    }
+  
+    .aboutme {
+      font-size: 14px;
+    }
+  }
+  

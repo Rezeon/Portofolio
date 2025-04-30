@@ -3,124 +3,105 @@
     width: 100%;
     height: auto;
     padding: 20px;
+    gap: 20px;
 }
-.skill{
+
+.skill {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 30px;
     align-items: center;
 }
-.hayk1{
+
+.hayk1, .hayk2, .hayk3 {
     width: 40%;
     height: 277px;
     display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 10px;
-    flex-direction: column;
     border-radius: 10px;
     box-shadow: 1px 6px 6px 4px rgba(0, 0, 0, 0.5);
 }
-.hayk1 img{
+
+.hayk1 img, .hayk2 img, .hayk3 img {
     width: 30px;
     height: 30px;
     padding: 5px;
     background-color: wheat;
     border-radius: 5px;
 }
-.hayk2{
-    width: 40%;
-    height: 277px;
-    display: flex;
-    margin-left: 80%;
-    gap: 20px;
-    padding: 10px;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 1px 6px 6px 4px rgba(0, 0, 0, 0.5);
-}
-.hayk2 img{
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    background-color: wheat;
-    border-radius: 5px;
-}
-.hayk3{
-    width: 40%;
-    height: 277px;
-    display: flex;
-    gap: 20px;
-    padding: 10px;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 1px 6px 6px 4px rgba(0, 0, 0, 0.5);
-}
-.hayk3 img{
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-    background-color: wheat;
-    border-radius: 5px;
-}
-.hayj{
+
+.hayj {
     font-size: 15px;
     font-weight: bold;
 }
-.hayd{
+
+.hayd {
     font-size: 12px;
     font-weight: 600;
 }
-.whyme{
+
+.whyme {
     width: 50%;
     padding: 20px;
     display: flex;
-    gap: 30px;
     flex-direction: column;
+    gap: 30px;
 }
-.mee{
+
+.mee {
     color: gray;
     font-size: 20px;
     font-weight: 600;
 }
-.yee{
+
+.yee {
     font-weight: 500;
     padding: 5px;
-    
 }
-@media (max-width:480px) {
-    .ext{
+
+@media (max-width: 480px) {
+    .ext {
+        flex-direction: row;
         gap: 10px;
     }
-    .skill{
+
+    .skill {
         gap: 15px;
     }
+
     .hayk1, .hayk2, .hayk3 {
         width: 80%;
-        gap: 5px;
         height: 187px;
+        gap: 5px;
         padding: 5px;
         border-radius: 5px;
         margin-left: 0px;
     }
-    .hayj{
-        font-size: 10px;
 
+    .hayj {
+        font-size: 10px;
     }
-    .hayd{
+
+    .hayd {
         font-size: 9px;
     }
-    .hayk1 img, .hayk2 img, .hayk3 img{
-      width: 12px;
-      height: 12px;
-      padding: 5px;
-      border-radius: 2px;
+
+    .hayk1 img, .hayk2 img, .hayk3 img {
+        width: 12px;
+        height: 12px;
+        padding: 5px;
+        border-radius: 2px;
     }
-    .whyme{
+
+    .whyme {
         padding: 10px;
         gap: 15px;
     }
-    .yee{
+
+    .yee {
         font-size: 12px;
     }
 }

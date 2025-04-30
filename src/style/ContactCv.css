@@ -1,21 +1,35 @@
-.contact{
+.contact {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 10px;
+    padding: 20px;
+    flex-wrap: wrap; /* agar lebih responsif di layar kecil */
 }
-.contak{
+
+.contak {
     width: 50%;
-    height: 70px;
-    justify-content: center;
-    align-items: center;
+    min-height: 70px;
     display: flex;
     flex-direction: column;
-    outline: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     border: none;
+    outline: none;
     border-radius: 10px;
     font-weight: 700;
     font-size: 16px;
-    padding: 40px;
+    background-color: #f5f5f5; /* tambahkan warna latar agar tidak transparan */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* opsional: memberi efek bayangan ringan */
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .contak {
+        width: 90%;
+        font-size: 14px;
+        padding: 15px;
+        min-height: 60px;
+    }
 }

@@ -4,50 +4,75 @@
     gap: 30px;
     padding: 30px;
 }
-.about{
+
+.about {
     font-size: 20px;
     font-weight: bold;
-    margin-left: 45%;
-
+    text-align: center;
+    margin-bottom: 20px;
 }
-.abtme{
+
+.abtme {
     font-weight: 500;
     font-size: 18px;
+    line-height: 1.6;
 }
-.webdev{
+
+.webdev {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
 }
-.judulabt{
+
+.judulabt {
     font-size: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    
+    gap: 10px;
 }
-.infoabtme{
+
+.infoabtme {
     font-size: 18px;
     font-weight: 500;
+    line-height: 1.5;
 }
-.imgvv{
-    margin: 10px;
-    align-items: center;
+
+.imgvv {
     width: 30px;
     height: 30px;
     padding: 5px;
     background-color: wheat;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* RESPONSIVE STYLE */
 @media (max-width: 480px) {
-    .sell{
-        height: 600px;
+    .sell {
+        padding: 15px;
+        gap: 20px;
     }
-    .abtme{
-        font-size: 12px;
+
+    .about {
+        font-size: 18px;
+        margin-bottom: 10px;
     }
-    .infoabtme{
-        font-size: 12px;
+
+    .abtme,
+    .infoabtme {
+        font-size: 14px;
+    }
+
+    .judulabt {
+        font-size: 16px;
+    }
+
+    .imgvv {
+        width: 25px;
+        height: 25px;
+        padding: 3px;
     }
 }

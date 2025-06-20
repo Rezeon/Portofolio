@@ -3,6 +3,7 @@ import PreviewChill from "../assets/webchil.png";
 import BackendChill from "../assets/backend.png";
 import PreviewToDo from "../assets/todolist.png";
 import PreviewDataScience from "../assets/datascience.png";
+import CatMedia from "../assets/a.png";
 
 function ProjectGithub() {
   return (
@@ -33,7 +34,7 @@ function ProjectGithub() {
         </div>
       </div>
       <div className="githubP">
-        <img src={BackendChill} alt="CatMedia Laravel Project" />
+        <img src={CatMedia} alt="CatMedia Laravel Project" />
         <div className="information">
           <div className="namaPro">CatMedia Laravel Project</div>
           <div className="ketPro">
@@ -44,16 +45,12 @@ function ProjectGithub() {
             <code>Laravel Sanctum</code> untuk otentikasi berbasis token, serta
             integrasi <strong>Cloudinary</strong> untuk manajemen dan
             penyimpanan gambar.
-            <br />
-            <br />
             Struktur proyek dirancang modular dengan fitur{" "}
             <strong>Register</strong>, <strong>Login</strong>,{" "}
             <strong>Upload foto profil</strong>, <strong>Posting gambar</strong>
             fitur pertemanan, Posting , Message dan Ganti password
-            <br />
-            <br />
             Proyek ini cocok sebagai dasar pengembangan aplikasi sosial modern
-            dengan arsitektur full-stack Laravel & Vue melalui{" "}
+            dengan arsitektur full-stack Laravel & React melalui{" "}
             <strong>Inertia</strong>, tanpa perlu REST API tradisional.
           </div>
           <div className="alt">

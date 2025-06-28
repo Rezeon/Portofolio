@@ -4,6 +4,7 @@ import BackendChill from "../assets/backend.png";
 import PreviewToDo from "../assets/todolist.png";
 import PreviewDataScience from "../assets/datascience.png";
 import CatMedia from "../assets/a.png";
+import NextJs from "../assets/NextJs.png";
 
 function ProjectGithub() {
   return (
@@ -86,6 +87,46 @@ function ProjectGithub() {
           </div>
         </div>
       </div>
+
+      <div className="githubP">
+      <img src={NextJs} alt="Preview Project Management App" />
+      <div className="information">
+        <div className="namaPro">Project Management App</div>
+        <div className="ketPro">
+          Project Management App adalah aplikasi fullstack berbasis Next.js
+          yang saya kembangkan untuk submission “Fullstack Sellerpintar”.
+          Aplikasi ini memungkinkan user untuk membuat dan mengelola project,
+          mengundang anggota tim, serta membuat dan mengubah status task.
+          <br />
+          <br />
+          Backend menggunakan <strong>NextJs</strong>,{" "}
+          <strong>Prisma ORM</strong>, <strong>PostgreSQL</strong>, dan{" "}
+          <strong>JWT</strong>. Frontend dibangun dengan{" "}
+          <strong>Next.js App Router</strong>, <strong>Tailwind CSS</strong>,
+          dan <strong>ShadCN UI</strong>. Project ini sudah terhubung dengan
+          database PostgreSQL dari <strong>Neon</strong> dan telah di-deploy ke{" "}
+          <strong>Vercel</strong>.
+        </div>
+        <div className="alt">
+          <a
+            href="https://github.com/Rezeon/-sp_fs_-rheyno_fernando-"
+            className="goTo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Repository
+          </a>
+          <a
+            href="https://sp-fs-rheyno-fernando.vercel.app"
+            className="web"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Go-To-Web
+          </a>
+        </div>
+      </div>
+    </div>
 
       <div className="githubP">
         <img src={PreviewChill} alt="Blogposts Project" />

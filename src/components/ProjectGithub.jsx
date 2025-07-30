@@ -2,6 +2,7 @@ import "../style/ProjectGitHub.css";
 import PreviewChill from "../assets/webchil.png";
 import BackendChill from "../assets/backend.png";
 import PreviewToDo from "../assets/todolist.png";
+import CatShop from "../assets/shop.png";
 import PreviewDataScience from "../assets/datascience.png";
 import CatMedia from "../assets/a.png";
 import NextJs from "../assets/NextJs.png";
@@ -45,17 +46,64 @@ function ProjectGithub() {
             <strong>React.js</strong> untuk frontend. Proyek ini menggunakan{" "}
             <code>Laravel Sanctum</code> untuk otentikasi berbasis token, serta
             integrasi <strong>Cloudinary</strong> untuk manajemen dan
-            penyimpanan gambar.
-            Struktur proyek dirancang modular dengan fitur{" "}
+            penyimpanan gambar. Struktur proyek dirancang modular dengan fitur{" "}
             <strong>Register</strong>, <strong>Login</strong>,{" "}
             <strong>Upload foto profil</strong>, <strong>Posting gambar</strong>
-            fitur pertemanan, Posting , Message dan Ganti password
-            Proyek ini cocok sebagai dasar pengembangan aplikasi sosial modern
-            dengan arsitektur full-stack Laravel & React melalui{" "}
+            fitur pertemanan, Posting , Message dan Ganti password Proyek ini
+            cocok sebagai dasar pengembangan aplikasi sosial modern dengan
+            arsitektur full-stack Laravel & React melalui{" "}
             <strong>Inertia</strong>, tanpa perlu REST API tradisional.
           </div>
           <div className="alt">
             <a href="https://github.com/Rezeon/CatMedia" className="goTo">
+              GitHub Repository
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="githubP">
+        <img src={CatShop} alt="CatShop Next.js E-commerce Project" />
+        <div className="information">
+          <div className="namaPro">CatShop Next.js E-commerce Project</div>
+          <div className="ketPro">
+            <strong>CatShop</strong> is a modern web-based e-commerce
+            application built using <strong>Next.js 15</strong> as a full-stack
+            framework, with <strong>tRPC</strong> for typesafe API calls and{" "}
+            <strong>Prisma ORM</strong>
+            for database management. It also integrates{" "}
+            <strong>Cloudinary</strong> for product image storage.
+            <br />
+            <br />
+            CatShop includes core e-commerce features such as{" "}
+            <strong>User Registration</strong>,<strong>Login</strong>, product
+            catalog management, <strong>Shopping Cart</strong>, dynamic
+            discounts, order history, and a secure{" "}
+            <strong>Payment Gateway</strong>
+            integration for real transactions. with Duitku
+            <br />
+            <br />
+            The admin dashboard allows administrators to manage products,
+            monitor orders, and update order statuses directly (for example,
+            changing status to <em>PAID</em>,<em>SHIPPED</em>, or{" "}
+            <em>COMPLETED</em>), providing full control over the store’s
+            operations.
+            <br />
+            <br />
+            The UI is built with <strong>Tailwind CSS</strong> and{" "}
+            <strong>Radix UI</strong> to ensure a modern, responsive, and
+            accessible experience. CatShop is an excellent base for building a
+            scalable, real-world online store using the full-stack{" "}
+            <strong>Next.js</strong>
+            architecture without needing a traditional REST API, thanks to{" "}
+            <strong>tRPC</strong>.
+          </div>
+          <div className="alt">
+            <a href="https://cat-shop-eta.vercel.app/" className="goTo">
+              Live Website
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/Rezeon/chill-shop" className="goTo">
               GitHub Repository
             </a>
           </div>
@@ -89,44 +137,44 @@ function ProjectGithub() {
       </div>
 
       <div className="githubP">
-      <img src={NextJs} alt="Preview Project Management App" />
-      <div className="information">
-        <div className="namaPro">Project Management App</div>
-        <div className="ketPro">
-          Project Management App adalah aplikasi fullstack berbasis Next.js
-          yang saya kembangkan untuk submission “Fullstack Sellerpintar”.
-          Aplikasi ini memungkinkan user untuk membuat dan mengelola project,
-          mengundang anggota tim, serta membuat dan mengubah status task.
-          <br />
-          <br />
-          Backend menggunakan <strong>NextJs</strong>,{" "}
-          <strong>Prisma ORM</strong>, <strong>PostgreSQL</strong>, dan{" "}
-          <strong>JWT</strong>. Frontend dibangun dengan{" "}
-          <strong>Next.js App Router</strong>, <strong>Tailwind CSS</strong>,
-          dan <strong>ShadCN UI</strong>. Project ini sudah terhubung dengan
-          database PostgreSQL dari <strong>Neon</strong> dan telah di-deploy ke{" "}
-          <strong>Vercel</strong>.
-        </div>
-        <div className="alt">
-          <a
-            href="https://github.com/Rezeon/-sp_fs_-rheyno_fernando-"
-            className="goTo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub Repository
-          </a>
-          <a
-            href="https://sp-fs-rheyno-fernando.vercel.app"
-            className="web"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Go-To-Web
-          </a>
+        <img src={NextJs} alt="Preview Project Management App" />
+        <div className="information">
+          <div className="namaPro">Project Management App</div>
+          <div className="ketPro">
+            Project Management App adalah aplikasi fullstack berbasis Next.js
+            yang saya kembangkan untuk submission “Fullstack Sellerpintar”.
+            Aplikasi ini memungkinkan user untuk membuat dan mengelola project,
+            mengundang anggota tim, serta membuat dan mengubah status task.
+            <br />
+            <br />
+            Backend menggunakan <strong>NextJs</strong>,{" "}
+            <strong>Prisma ORM</strong>, <strong>PostgreSQL</strong>, dan{" "}
+            <strong>JWT</strong>. Frontend dibangun dengan{" "}
+            <strong>Next.js App Router</strong>, <strong>Tailwind CSS</strong>,
+            dan <strong>ShadCN UI</strong>. Project ini sudah terhubung dengan
+            database PostgreSQL dari <strong>Neon</strong> dan telah di-deploy
+            ke <strong>Vercel</strong>.
+          </div>
+          <div className="alt">
+            <a
+              href="https://github.com/Rezeon/-sp_fs_-rheyno_fernando-"
+              className="goTo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Repository
+            </a>
+            <a
+              href="https://sp-fs-rheyno-fernando.vercel.app"
+              className="web"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Go-To-Web
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
       <div className="githubP">
         <img src={PreviewChill} alt="Blogposts Project" />

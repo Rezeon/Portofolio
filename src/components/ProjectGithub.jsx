@@ -73,33 +73,23 @@ function ProjectGithub() {
             <strong>Prisma ORM</strong>
             for database management. It also integrates{" "}
             <strong>Cloudinary</strong> for product image storage.
-            <br />
-            <br />
             CatShop includes core e-commerce features such as{" "}
             <strong>User Registration</strong>,<strong>Login</strong>, product
             catalog management, <strong>Shopping Cart</strong>, dynamic
             discounts, order history, and a secure{" "}
             <strong>Payment Gateway</strong>
             integration for real transactions. with Duitku
-            <br />
-            <br />
             The admin dashboard allows administrators to manage products,
             monitor orders, and update order statuses directly (for example,
             changing status to <em>PAID</em>,<em>SHIPPED</em>, or{" "}
             <em>COMPLETED</em>), providing full control over the store’s
             operations.
-            <br />
-            <br />
             The UI is built with <strong>Tailwind CSS</strong> and{" "}
             <strong>Radix UI</strong> to ensure a modern, responsive, and
-            accessible experience. CatShop is an excellent base for building a
-            scalable, real-world online store using the full-stack{" "}
-            <strong>Next.js</strong>
-            architecture without needing a traditional REST API, thanks to{" "}
-            <strong>tRPC</strong>.
+            accessible experience
           </div>
           <div className="alt">
-            <a href="https://cat-shop-eta.vercel.app/" className="goTo">
+            <a href="https://cat-shop-eta.vercel.app/" className="web">
               Live Website
             </a>
             &nbsp;|&nbsp;

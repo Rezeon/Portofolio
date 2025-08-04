@@ -1,21 +1,28 @@
-import '../style/HeaderCv.css'
-import Logo from '../assets/chart-network.png'
-function HeaderCv () {
-    return (
-        <header>
-            <div className="logo">
-                <img src={Logo} alt="" />
-            </div>
+import Logo from "../assets/chart-network.png";
 
-            <div className="pilihan">
-            <a className="home" href="#home" tabIndex="0">Home</a>
-            <a className="home" href="#Sertif" tabIndex="0">Certificate</a>
-            <a className="home" href="#skill" tabIndex="0">Skills</a>
-            <a className="home" href="#kontak" tabIndex="0">Contact</a>
-            
-            </div>
-        </header>
-    )
+function HeaderCv() {
+  return (
+    <header className="w-full items-center justify-around border-2 h-[50px] flex">
+      <div className="w-[20%]">
+        <img src={Logo} alt="" />
+      </div>
+
+      <div className="w-[40%] flex justify-around">
+        <a  className="inline-block px-3 py-1 hover:underline" href="#home">
+          Home
+        </a>
+        <a  className="inline-block px-3 py-1 hover:underline"  href="#Sertif">
+          Certificate
+        </a>
+        <a  className="inline-block px-3 py-1 hover:underline"  href="#skill">
+          Skills
+        </a>
+        <a  className="inline-block px-3 py-1 hover:underline"  href="#kontak">
+          Contact
+        </a>
+      </div>
+    </header>
+  );
 }
 
 export default HeaderCv;

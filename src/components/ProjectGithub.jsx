@@ -1,4 +1,3 @@
-import "../style/ProjectGitHub.css";
 import PreviewChill from "../assets/webchil.png";
 import BackendChill from "../assets/backend.png";
 import PreviewToDo from "../assets/todolist.png";
@@ -6,246 +5,173 @@ import CatShop from "../assets/shop.png";
 import PreviewDataScience from "../assets/datascience.png";
 import CatMedia from "../assets/a.png";
 import NextJs from "../assets/NextJs.png";
+import { motion } from "framer-motion";
+import * as ScrollArea from "@radix-ui/react-scroll-area";
 
-function ProjectGithub() {
+export default function ProjectGithub() {
+  const projects = [
+    {
+      img: PreviewToDo,
+      alt: "ToDo List Preview",
+      name: "ToDoList",
+      desc: `ToDoList is a simple and responsive task management web application built using HTML, CSS, and JavaScript. The app allows users to add, delete, and mark tasks as completed with a clean and intuitive interface.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/ToDoList",
+          label: "GitHub Repository",
+        },
+        { href: "https://rezeon.github.io/ToDoList/", label: "Live Website" },
+      ],
+    },
+    {
+      img: CatMedia,
+      alt: "CatMedia Laravel Project",
+      name: "CatMedia Laravel Project",
+      desc: `CatMedia adalah aplikasi media sosial berbasis Laravel 11, Inertia.js & React. Fitur register, login, upload foto, posting gambar, pertemanan, pesan, dan ganti password. Menggunakan Cloudinary untuk manajemen gambar.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/CatMedia",
+          label: "GitHub Repository",
+        },
+      ],
+    },
+    {
+      img: CatShop,
+      alt: "CatShop Next.js E-commerce",
+      name: "CatShop Next.js E-commerce Project",
+      desc: `CatShop is a modern e-commerce app with Next.js 15, tRPC, Prisma ORM, Cloudinary, shopping cart, discounts, order history, and Duitku payment gateway. Admin dashboard for product & order management.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/chill-shop",
+          label: "GitHub Repository",
+        },
+        { href: "https://cat-shop-eta.vercel.app/", label: "Live Website" },
+      ],
+    },
+    {
+      img: PreviewChill,
+      alt: "WebChill Project",
+      name: "WebChill",
+      desc: `ReactjsChill is a React-based web app with React Router DOM, Axios, Firebase, React Player, React Modal, and React Toastify. Deployed via GitHub Pages.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/ReactjsChill",
+          label: "GitHub Repository",
+        },
+        { href: "https://rezeon.github.io/ReactjsChill/", label: "Live Website" },
+      ],
+    },
+    {
+      img: NextJs,
+      alt: "Project Management App",
+      name: "Project Management App",
+      desc: `A Next.js fullstack project for managing projects, tasks, and team members. Uses Prisma ORM, PostgreSQL (Neon), JWT auth, Tailwind CSS, ShadCN UI. Deployed on Vercel.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/-sp_fs_-rheyno_fernando-",
+          label: "GitHub Repository",
+        },
+        {
+          href: "https://sp-fs-rheyno-fernando.vercel.app",
+          label: "Live Website",
+        },
+      ],
+    },
+    {
+      img: PreviewChill,
+      alt: "Blogposts Laravel",
+      name: "Laravel Blogposts",
+      desc: `Blogposts is a Laravel + MySQL blogging platform with CRUD, Eloquent ORM, MVC pattern, Bootstrap styling, and user authentication.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/Blogposts",
+          label: "GitHub Repository",
+        },
+      ],
+    },
+    {
+      img: BackendChill,
+      alt: "Backend Project",
+      name: "Backend Project",
+      desc: `Node.js backend using Express.js, JWT, bcrypt, CORS, Morgan, Multer, Knex.js, MySQL2, Midtrans for payments, file uploads, and ws for real-time.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/backendProject",
+          label: "GitHub Repository",
+        },
+      ],
+    },
+    {
+      img: PreviewDataScience,
+      alt: "Data Science Project",
+      name: "Data Science Project",
+      desc: `Data-Science-Project with Python, Pandas, NumPy, Matplotlib, Seaborn. Includes EDA, data cleaning, and meaningful visualizations.`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/Data-Science-project",
+          label: "GitHub Repository",
+        },
+      ],
+    },
+  ];
+
   return (
-    <div className="project">
-      <div className="judul">My-Project</div>
-      <div className="githubP">
-        <img src={PreviewToDo} alt="ToDo List Preview" />
-        <div className="information">
-          <div className="namaPro">ToDoList</div>
-          <div className="ketPro">
-            ToDoList is a simple and responsive task management web application
-            built using <strong>HTML</strong>, <strong>CSS</strong>, and{" "}
-            <strong>JavaScript</strong>. The app allows users to{" "}
-            <strong>add</strong>, <strong>delete</strong>, and{" "}
-            <strong>mark tasks as completed</strong> with a clean and intuitive
-            interface. It is designed to enhance productivity while
-            demonstrating core JavaScript functionality without any external
-            frameworks or libraries.
+    <div className="w-full max-w-7xl mx-auto px-4 py-8 text-black font-mono">
+      <h2 className="text-3xl font-bold mb-3 text-center">My Projects</h2>
+      <ScrollArea.Root className="w-full h-[70vh] overflow-hidden rounded-lg border border-white/20">
+        <ScrollArea.Viewport className="w-full h-full p-4">
+          <div className="flex flex-col gap-8">
+            {projects.map((project, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.4,
+                  delay: idx * 0.1,
+                  ease: "easeOut",
+                }}
+                viewport={{ once: true }}
+                className="bg-white/10 backdrop-blur-lg rounded-lg shadow p-4 flex flex-col md:flex-row gap-4"
+              >
+                <img
+                  src={project.img}
+                  alt={project.alt}
+                  className="w-full md:w-48 h-auto object-cover rounded"
+                />
+                <div className="flex flex-col justify-between">
+                  <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                  <p className="text-sm text-justify mb-4">{project.desc}</p>
+                  <div className="flex flex-wrap gap-3">
+                    {project.links.map((link, linkIdx) => (
+                      <a
+                        key={linkIdx}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-black text-white rounded hover:bg-black/80 transition"
+                      >
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
-          <div className="alt">
-            <a href="https://github.com/Rezeon/ToDoList" className="goTo">
-              GitHub Repository
-            </a>
-            <a href="https://rezeon.github.io/ToDoList/" className="web">
-              Go-To-Web
-            </a>
-          </div>
-        </div>
-      </div>
-      <div className="githubP">
-        <img src={CatMedia} alt="CatMedia Laravel Project" />
-        <div className="information">
-          <div className="namaPro">CatMedia Laravel Project</div>
-          <div className="ketPro">
-            <strong>CatMedia</strong> adalah aplikasi media sosial berbasis web
-            yang dibangun menggunakan <strong>Laravel 11</strong> sebagai
-            backend dan <strong>Inertia.js</strong> dengan{" "}
-            <strong>React.js</strong> untuk frontend. Proyek ini menggunakan{" "}
-            <code>Laravel Sanctum</code> untuk otentikasi berbasis token, serta
-            integrasi <strong>Cloudinary</strong> untuk manajemen dan
-            penyimpanan gambar. Struktur proyek dirancang modular dengan fitur{" "}
-            <strong>Register</strong>, <strong>Login</strong>,{" "}
-            <strong>Upload foto profil</strong>, <strong>Posting gambar</strong>
-            fitur pertemanan, Posting , Message dan Ganti password Proyek ini
-            cocok sebagai dasar pengembangan aplikasi sosial modern dengan
-            arsitektur full-stack Laravel & React melalui{" "}
-            <strong>Inertia</strong>, tanpa perlu REST API tradisional.
-          </div>
-          <div className="alt">
-            <a href="https://github.com/Rezeon/CatMedia" className="goTo">
-              GitHub Repository
-            </a>
-          </div>
-        </div>
-      </div>
+        </ScrollArea.Viewport>
 
-      <div className="githubP">
-        <img src={CatShop} alt="CatShop Next.js E-commerce Project" />
-        <div className="information">
-          <div className="namaPro">CatShop Next.js E-commerce Project</div>
-          <div className="ketPro">
-            <strong>CatShop</strong> is a modern web-based e-commerce
-            application built using <strong>Next.js 15</strong> as a full-stack
-            framework, with <strong>tRPC</strong> for typesafe API calls and{" "}
-            <strong>Prisma ORM</strong>
-            for database management. It also integrates{" "}
-            <strong>Cloudinary</strong> for product image storage.
-            CatShop includes core e-commerce features such as{" "}
-            <strong>User Registration</strong>,<strong>Login</strong>, product
-            catalog management, <strong>Shopping Cart</strong>, dynamic
-            discounts, order history, and a secure{" "}
-            <strong>Payment Gateway</strong>
-            integration for real transactions. with Duitku
-            The admin dashboard allows administrators to manage products,
-            monitor orders, and update order statuses directly (for example,
-            changing status to <em>PAID</em>,<em>SHIPPED</em>, or{" "}
-            <em>COMPLETED</em>), providing full control over the store’s
-            operations.
-            The UI is built with <strong>Tailwind CSS</strong> and{" "}
-            <strong>Radix UI</strong> to ensure a modern, responsive, and
-            accessible experience
-          </div>
-          <div className="alt">
-            <a href="https://cat-shop-eta.vercel.app/" className="web">
-              Live Website
-            </a>
-            &nbsp;|&nbsp;
-            <a href="https://github.com/Rezeon/chill-shop" className="goTo">
-              GitHub Repository
-            </a>
-          </div>
-        </div>
-      </div>
+        {/* Optional scrollbar */}
+        <ScrollArea.Scrollbar
+          orientation="vertical"
+          className="flex select-none touch-none p-0.5 bg-black/30 transition-colors ease-out hover:bg-black/50"
+        >
+          <ScrollArea.Thumb className="flex-1 bg-white/50 rounded-full" />
+        </ScrollArea.Scrollbar>
 
-      <div className="githubP">
-        <img src={PreviewChill} alt="" />
-        <div className="information">
-          <div className="namaPro">WebChill</div>
-          <div className="ketPro">
-            ReactjsChill is a React-based interactive web application that I
-            built to display media players, notifications, and dynamic content.
-            The project uses <strong>React Router DOM</strong> for navigation
-            between pages, <strong>Axios</strong> for API connections, and{" "}
-            <strong>Firebase</strong> for backend features such as
-            authentication and data storage. Styling and media interaction are
-            enhanced using <strong>React Player</strong>,{" "}
-            <strong>React Modal</strong>, and <strong>React Toastify</strong>.
-            The app is deployed to GitHub Pages using <strong>gh-pages</strong>.
-          </div>
-          <div className="alt">
-            <a href="https://github.com/Rezeon/ReactjsChill" className="goTo">
-              GitHub Repository
-            </a>
-            <a href="https://rezeon.github.io/ReactjsChill/" className="web">
-              Go-To-Web
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="githubP">
-        <img src={NextJs} alt="Preview Project Management App" />
-        <div className="information">
-          <div className="namaPro">Project Management App</div>
-          <div className="ketPro">
-            Project Management App adalah aplikasi fullstack berbasis Next.js
-            yang saya kembangkan untuk submission “Fullstack Sellerpintar”.
-            Aplikasi ini memungkinkan user untuk membuat dan mengelola project,
-            mengundang anggota tim, serta membuat dan mengubah status task.
-            <br />
-            <br />
-            Backend menggunakan <strong>NextJs</strong>,{" "}
-            <strong>Prisma ORM</strong>, <strong>PostgreSQL</strong>, dan{" "}
-            <strong>JWT</strong>. Frontend dibangun dengan{" "}
-            <strong>Next.js App Router</strong>, <strong>Tailwind CSS</strong>,
-            dan <strong>ShadCN UI</strong>. Project ini sudah terhubung dengan
-            database PostgreSQL dari <strong>Neon</strong> dan telah di-deploy
-            ke <strong>Vercel</strong>.
-          </div>
-          <div className="alt">
-            <a
-              href="https://github.com/Rezeon/-sp_fs_-rheyno_fernando-"
-              className="goTo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Repository
-            </a>
-            <a
-              href="https://sp-fs-rheyno-fernando.vercel.app"
-              className="web"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Go-To-Web
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="githubP">
-        <img src={PreviewChill} alt="Blogposts Project" />
-        <div className="information">
-          <div className="namaPro">Laravel</div>
-          <div className="ketPro">
-            Blogposts is a blogging platform built using{" "}
-            <strong>Laravel</strong>, a PHP framework, and{" "}
-            <strong>MySQL</strong> for database management. This project
-            implements <strong>CRUD (Create, Read, Update, Delete)</strong>{" "}
-            functionality, allowing users to create, view, update, and delete
-            blog posts. The app uses <strong>Laravel's Eloquent ORM</strong> for
-            database interactions and follows the{" "}
-            <strong>MVC (Model-View-Controller)</strong> architecture. Styling
-            is done using <strong>Bootstrap</strong>, ensuring a responsive
-            design. The project also includes{" "}
-            <strong>user authentication</strong>, and features a clean,
-            organized code structure that can be expanded for more advanced
-            functionalities.
-          </div>
-
-          <div className="alt">
-            <a href="https://github.com/Rezeon/Blogposts" className="goTo">
-              GitHub Repository
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="githubP">
-        <img src={BackendChill} alt="Backend Project" />
-        <div className="information">
-          <div className="namaPro">Backend Project</div>
-          <div className="ketPro">
-            BackendProject is a Node.js-based backend application using
-            Express.js as the core framework. It features a modular folder
-            structure, environment variable management with <code>.env</code>,
-            and various middleware such as <strong>CORS</strong>,{" "}
-            <strong>Morgan</strong>, and <strong>Multer</strong> to enhance API
-            security, logging, and file handling. Authentication is implemented
-            using <strong>JWT</strong> and <strong>bcrypt</strong>, while
-            database interaction is handled with <strong>Knex.js</strong> and{" "}
-            <strong>MySQL2</strong>. This project also integrates{" "}
-            <strong>Midtrans</strong> for payment gateway functionality and
-            supports file uploads and real-time communication using WebSocket (
-            <strong>ws</strong>). It is designed to be a solid backend
-            foundation for scalable web applications.
-          </div>
-          <div className="alt">
-            <a href="https://github.com/Rezeon/backendProject" className="goTo">
-              GitHub Repository
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div className="githubP">
-        <img src={PreviewDataScience} alt="Data Science Project Preview" />
-        <div className="information">
-          <div className="namaPro">Data Science Project</div>
-          <div className="ketPro">
-            Data-Science-Project is a collection of my data analysis works built
-            using <strong>Python</strong> and essential data science libraries
-            like <strong>Pandas</strong>, <strong>NumPy</strong>,{" "}
-            <strong>Matplotlib</strong>, and <strong>Seaborn</strong>. The
-            project includes exploratory data analysis (EDA), data cleaning, and
-            visualization tasks aimed at uncovering insights from structured
-            datasets. This repository showcases my skills in data wrangling,
-            descriptive statistics, and presenting meaningful visual patterns.
-          </div>
-          <div className="alt">
-            <a
-              href="https://github.com/Rezeon/Data-Science-project"
-              className="goTo"
-            >
-              Repository Github
-            </a>
-          </div>
-        </div>
-      </div>
+        {/* Corner (for both scroll directions) */}
+        <ScrollArea.Corner className="bg-black/30" />
+      </ScrollArea.Root>
     </div>
   );
 }
-export default ProjectGithub;

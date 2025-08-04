@@ -1,38 +1,69 @@
-import '../style/MoreCv.css'
-import tigaD from '../assets/box.png'
-import dataB from '../assets/database.png'
-import webD from '../assets/layout-dashboard.png'
+import { motion } from "framer-motion";
+import tigaD from "../assets/box.png";
+import dataB from "../assets/database.png";
+import webD from "../assets/layout-dashboard.png";
 
-function MoreCv() {
-    return(
-        <div className="sell">
-            <div className="about">About Me</div>
-            <div className="abtme">
-                Hello! I’m Rheyno Fernando Velga Wesi Aji, a passionate Full-Stack Developer,
-                Data Scientist, and 3D Modeler dedicated to building innovative and efficient technology solutions.
+export default function MoreCv() {
+  const sections = [
+    {
+      icon: webD,
+      title: "Web Development",
+      desc: `I have experience in Full-Stack Development, specializing in React.js, Vue.js, Laravel, and Express.js. 
+      I build responsive, high-performance web applications with clean code, API integration, and solid database management.`,
+    },
+    {
+      icon: dataB,
+      title: "Data Science & Machine Learning",
+      desc: `I analyze and visualize data using Python, R, and SQL, along with Pandas, NumPy, Matplotlib, and scikit-learn. 
+      I create meaningful insights and develop ML models using TensorFlow and related tools.`,
+    },
+    {
+      icon: tigaD,
+      title: "3D Modeling & Product Design",
+      desc: `I design precise 2D/3D product models with AutoCAD, SolidWorks, and Autodesk, creating technical drawings for prototyping and manufacturing.`,
+    },
+  ];
+
+  return (
+    <div className="w-full flex flex-col gap-10 px-6 py-12">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-3xl font-bold text-center"
+      >
+        About Me
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="max-w-3xl mx-auto text-center text-black leading-relaxed"
+      >
+        Hello! I’m Rheyno Fernando Velga Wesi Aji — a versatile Full-Stack Developer, Data Scientist, and 3D Modeler,
+        passionate about delivering innovative, efficient, and impactful technology solutions.
+      </motion.p>
+
+      <div className="flex flex-col gap-8">
+        {sections.map((item, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: idx * 0.2 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row md:items-start gap-4 bg-white/5 backdrop-blur-lg p-6 rounded-lg border border-white/10"
+          >
+            <div>
+              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-black leading-relaxed">{item.desc}</p>
             </div>
-            <div className="webdev">
-                <div className="judulabt">-<img src={webD} alt="" className='imgvv' />Web Development</div>
-                <div className="infoabtme">
-                I have experience in Full-Stack Development, specializing in React.js, Vue.js, Laravel, and Express.js. I develop interactive, responsive, 
-                and high-performance web applications by implementing clean code principles and integrating APIs and databases effectively.
-                </div>
-            </div>
-            <div className="webdev">
-                <div className="judulabt">-<img src={dataB} alt="" className='imgvv' />Data Science & Machine Learning</div>
-                <div className="infoabtme">
-                With expertise in Python, R, and SQL, along with libraries like Pandas, NumPy, Matplotlib, and scikit-learn, 
-                I analyze and process data to generate meaningful insights. I also have experience working with TensorFlow for building Machine Learning models.
-                </div>
-            </div>
-            <div className="webdev">
-                <div className="judulabt">-<img src={tigaD} alt="" className='imgvv' />3D Modeling & Product Design</div>
-                <div className="infoabtme">
-                As a 3D Modeler, I am proficient in software like AutoCAD, SolidWorks, and Autodesk, 
-                designing detailed and functional product models.
-                </div>
-            </div>
-        </div>
-    )
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
 }
-export default MoreCv;

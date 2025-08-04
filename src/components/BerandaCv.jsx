@@ -4,7 +4,7 @@ export default function BerandaCv() {
   const links = [
     { href: "https://github.com/Rezeon", label: "GitHub ^" },
     { href: "https://www.instagram.com/reno.w2/", label: "Instagram ^" },
-    { href: "www.linkedin.com/in/rheyno-fernando-2764062b2", label: "LinkedIn ^" },
+    { href: "https://www.linkedin.com/in/rheyno-fernando-2764062b2", label: "LinkedIn ^" },
   ];
 
   return (

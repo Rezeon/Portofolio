@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ContactCv() {
   const handleWhatsApp = () => {
-    const phoneNumber = "6286542883416";
+    const phoneNumber = "6285642883416";
     const message = encodeURIComponent(
       "Halo Rheyno, saya tertarik dengan portofolio Anda. Boleh saya hubungi?"
     );

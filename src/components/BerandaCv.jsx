@@ -17,7 +17,7 @@ export default function BerandaCv() {
       >
         <h1 className="text-4xl font-extrabold mb-4">Haii, I am Rheyno</h1>
         <p className="mb-6 text-justify leading-relaxed">
-          Hello! I'm Rheyno Fernando, a Full-Stack Developer & Data Scientist
+          Hello! I m Rheyno Fernando, a Full-Stack Developer & Data Scientist
           with a passion for building dynamic, responsive, and user-friendly web
           applications.
         </p>

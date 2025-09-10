@@ -4,6 +4,7 @@ import PreviewToDo from "../assets/todolist.png";
 import CatShop from "../assets/shop.png";
 import PreviewDataScience from "../assets/datascience.png";
 import CatMedia from "../assets/a.png";
+import CMLABS from "../assets/cmlabs.png";
 import NextJs from "../assets/NextJs.png";
 import { motion } from "framer-motion";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
@@ -21,6 +22,26 @@ export default function ProjectGithub() {
           label: "GitHub Repository",
         },
         { href: "https://rezeon.github.io/ToDoList/", label: "Live Website" },
+      ],
+    },
+    {
+      img: CMLABS,
+      alt: "CMLABS KPI tracker",
+      name: "CMLABS KPI tracker",
+      desc: `CMLABS KPI Tracker adalah aplikasi berbasis web kita kembangkan untuk membantu perusahaan CMLABS Indonesia Digital dalam melakukan pelacakan dan pengelolaan KPI (Key Performance Indicator) karyawan. Project ini adalah kolaborasi team c untuk tugas magang kita membangun project ini bersama. Aplikasi ini dibuat dengan pendekatan full-stack development menggunakan teknologi modern di frontend dan backend agar sistem lebih interaktif, aman, dan scalable`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/vpbi-kpi-tracker-backend",
+          label: "GitHub FrontEnd",
+        },
+        {
+          href: "https://github.com/Rezeon/vpbi-kpi-tracker-frontend",
+          label: "GitHub Backend",
+        },
+        {
+          href: "https://vpbi-kpi-tracker-frontend-dusky.vercel.app/",
+          label: "Live Website",
+        },
       ],
     },
     {
@@ -116,7 +137,7 @@ export default function ProjectGithub() {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8 text-black font-mono">
+    <div className="w-full mx-auto px-4 py-8 text-black font-mono">
       <h2 className="text-3xl font-bold mb-3 text-center">My Projects</h2>
       <ScrollArea.Root className="w-full h-[70vh] overflow-hidden rounded-lg border border-white/20">
         <ScrollArea.Viewport className="w-full h-full p-4">
@@ -132,14 +153,14 @@ export default function ProjectGithub() {
                   ease: "easeOut",
                 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-lg rounded-lg shadow p-4 flex flex-col md:flex-row gap-4"
+                className="bg-white/10 backdrop-blur-lg rounded-lg shadow h-auto p-4 flex flex-col md:flex-row gap-4"
               >
                 <img
                   src={project.img}
                   alt={project.alt}
-                  className="w-full md:w-48 h-auto object-cover rounded"
+                  className="w-full md:w-[30%] aspect-video rounded"
                 />
-                <div className="flex flex-col justify-between">
+                <div className="flex flex-col h-auto justify-between">
                   <h3 className="text-xl font-bold mb-2">{project.name}</h3>
                   <p className="text-sm text-justify mb-4">{project.desc}</p>
                   <div className="flex flex-wrap gap-3">

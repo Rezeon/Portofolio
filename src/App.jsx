@@ -95,7 +95,7 @@ export default function App() {
 
       <div className="flex h-11/12 relative m-4 mb-4 border border-gray-400">
         {/* Sidebar: visible on sm+ */}
-        <div className="hidden sm:block w-[40%] backdrop-blur-[2px]">
+        <div className="hidden sm:block w-[30%] backdrop-blur-[2px]">
           <SidebarCV
             setActiveComponent={setActiveComponent}
             activeComponent={activeComponent}
@@ -124,7 +124,7 @@ export default function App() {
         </AnimatePresence>
 
         {/* Main Content */}
-        <main className="w-full sm:w-[60%] h-full overflow-y-auto backdrop-blur-[2px]">
+        <main className="w-full sm:w-[70%] h-full overflow-y-auto backdrop-blur-[2px]">
           {renderComponent()}
         </main>
       </div>

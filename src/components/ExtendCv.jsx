@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import tigaD from "../assets/box.png";
 import dataB from "../assets/database.png";
 import webD from "../assets/layout-dashboard.png";
+import PixelCard from "./PixelCard";
+import ScrambledText from "./ScrambledText";
 
 export default function ExtendCv() {
   const items = [
@@ -24,19 +26,24 @@ export default function ExtendCv() {
 
   return (
     <div className="w-full flex flex-col gap-12 px-4 md:px-8 py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="flex flex-col w-full md:flex-row gap-1">
         {items.map((item, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-            viewport={{ once: true }}
-            className="group flex flex-col items-center text-center p-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 shadow-md hover:shadow-lg transition duration-300 ease-in-out hover:bg-white/20"
-          >
-            <h3 className="text-lg md:text-xl font-bold mb-2 text-black">{item.title}</h3>
-            <p className="text-sm md:text-base leading-relaxed text-black/80">{item.desc}</p>
-          </motion.div>
+          <PixelCard key={idx} variant="yellow">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              viewport={{ once: true }}
+              className="w-full absolute group flex flex-col p-2 items-center text-center "
+            >
+              <h3 className="text-lg md:text-xl font-bold mb-2 text-white">
+                {item.title}
+              </h3>
+              <p className="text-sm md:text-base leading-relaxed text-white/80">
+                {item.desc}
+              </p>
+            </motion.div>
+          </PixelCard>
         ))}
       </div>
 
@@ -47,15 +54,24 @@ export default function ExtendCv() {
         viewport={{ once: true }}
         className="max-w-4xl mx-auto text-center px-4"
       >
-        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-black">Why Me?</h2>
-        <p className="text-sm md:text-base leading-relaxed text-black/80">
-          I am a versatile developer and designer who bridges Full-Stack Development,
-          Data Science, and 3D Product Design. I craft responsive, user-friendly
-          applications, deliver clear data insights, and visualize detailed product
-          concepts. My adaptability, problem-solving skills, and passion for learning
-          help me add value to any team. Choosing me means working with a dedicated,
-          collaborative professional ready to deliver real results.
-        </p>
+        <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+          Why Me?
+        </h2>
+        <ScrambledText
+          className="scrambled-text-demo"
+          radius={100}
+          duration={1.2}
+          speed={0.5}
+          scrambleChars={0}
+        >
+          I am a versatile developer and designer who bridges Full-Stack
+          Development, Data Science, and 3D Product Design. I craft responsive,
+          user-friendly applications, deliver clear data insights, and visualize
+          detailed product concepts. My adaptability, problem-solving skills,
+          and passion for learning help me add value to any team. Choosing me
+          means working with a dedicated, collaborative professional ready to
+          deliver real results.
+        </ScrambledText>
       </motion.div>
     </div>
   );

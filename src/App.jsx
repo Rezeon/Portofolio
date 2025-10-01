@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BerandaCv from "./components/BerandaCv";
 import ContactCv from "./components/ContactCv";
 import SertivCv from "./components/SertivCv";
@@ -9,10 +9,13 @@ import MoreCv from "./components/MoreCv";
 import SidebarCV from "./components/SidebarCv";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { motion, AnimatePresence } from "framer-motion";
+import { LoadingItem } from "./components/ui/loading";
+import Beams from "./components/Beams";
 
 export default function App() {
   const [activeComponent, setActiveComponent] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const renderComponent = () => {
     switch (activeComponent) {
@@ -53,16 +56,32 @@ export default function App() {
     }
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <LoadingItem />;
+  }
+
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-        autoPlay
-        muted
-        loop
+      <div
+        style={{ width: "100%", height: "100%", position: "absolute" }}
+        className="-z-10 bg-gray-300 "
       >
-        <source src="/Portofolio/background.mp4" type="video/mp4" />
-      </video>
+        <Beams
+          beamWidth={0.8}
+          beamHeight={18}
+          beamNumber={12}
+          lightColor="#f9f0f0"
+          speed={3}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={18}
+        />
+      </div>
 
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -124,7 +143,7 @@ export default function App() {
         </AnimatePresence>
 
         {/* Main Content */}
-        <main className="w-full sm:w-[70%] h-full overflow-y-auto backdrop-blur-[2px]">
+        <main className="w-full sm:w-[70%] text-white h-full overflow-y-auto">
           {renderComponent()}
         </main>
       </div>

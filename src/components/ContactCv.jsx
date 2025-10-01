@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-
+import ProfileCard from "./ProfileCard";
+import MyImage from "../assets/saya.png"
 export default function ContactCv() {
   const handleWhatsApp = () => {
     const phoneNumber = "6285642883416";
@@ -21,27 +22,18 @@ export default function ContactCv() {
   return (
     <section id="contact" className="w-full h-full flex justify-center py-12">
       <div className="flex flex-col gap-6 h-full items-center">
-        <motion.button
-          onClick={handleWhatsApp}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="relative px-6 py-3 text-black font-mono font-semibold transition"
-        >
-          <span className="hover:underline underline-offset-4 decoration-2">
-            WhatsApp ^
-          </span>
-        </motion.button>
-
-        <motion.button
-          onClick={handleEmail}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="relative px-6 py-3 text-black font-mono font-semibold transition"
-        >
-          <span className="hover:underline underline-offset-4 decoration-2">
-            Email ^
-          </span>
-        </motion.button>
+        <ProfileCard
+          name="Rheyno fernando"
+          title="Full Stack Developer"
+          handle="reno.w2"
+          status="Online"
+          contactText="Contact Me"
+          avatarUrl={MyImage}
+          showUserInfo={true}
+          enableTilt={true}
+          enableMobileTilt={false}
+          onContactClick={() => handleEmail()}
+        />
       </div>
     </section>
   );

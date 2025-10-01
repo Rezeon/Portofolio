@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SpotlightCard from "./SpotlightCard";
 
 export default function SkillCv() {
   const skills = [
@@ -37,9 +38,14 @@ export default function SkillCv() {
               ease: "easeOut",
             }}
             viewport={{ once: true }}
-            className="px-6 py-3 border border-white/20 backdrop-blur-md rounded-md text-black font-mono transition-colors cursor-pointer"
+            className="rounded-2xl"
           >
-            {skill}
+            <SpotlightCard
+              className="custom-spotlight-card rounded-2xl"
+              spotlightColor="rgba(0, 229, 255, 0.2)"
+            >
+              {skill}
+            </SpotlightCard>
           </motion.span>
         ))}
       </div>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import tigaD from "../assets/box.png";
 import dataB from "../assets/database.png";
 import webD from "../assets/layout-dashboard.png";
+import MagicBento from "./MagicBento";
 
 export default function MoreCv() {
   const sections = [
@@ -41,28 +42,26 @@ export default function MoreCv() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
         viewport={{ once: true }}
-        className="max-w-3xl mx-auto text-center text-black leading-relaxed"
+        className="max-w-3xl mx-auto text-center text-white leading-relaxed"
       >
-        Hello! I’m Rheyno Fernando Velga Wesi Aji — a versatile Full-Stack Developer, Data Scientist, and 3D Modeler,
-        passionate about delivering innovative, efficient, and impactful technology solutions.
+        Hello! I’m Rheyno Fernando Velga Wesi Aji — a versatile Full-Stack
+        Developer, Data Scientist, and 3D Modeler, passionate about delivering
+        innovative, efficient, and impactful technology solutions.
       </motion.p>
 
       <div className="flex flex-col gap-8">
-        {sections.map((item, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-            viewport={{ once: true }}
-            className="flex flex-col md:flex-row md:items-start gap-4 bg-white/5 backdrop-blur-lg p-6 rounded-lg border border-white/10"
-          >
-            <div>
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-black leading-relaxed">{item.desc}</p>
-            </div>
-          </motion.div>
-        ))}
+        <MagicBento
+          textAutoHide={true}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={true}
+          enableMagnetism={true}
+          clickEffect={true}
+          spotlightRadius={300}
+          particleCount={12}
+          glowColor="132, 0, 255"
+        />
       </div>
     </div>
   );

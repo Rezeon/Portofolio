@@ -1,3 +1,6 @@
+import FlowingMenu from "./FlowingMenu";
+import TextType from "./TextType";
+
 function SidebarCV({ setActiveComponent, activeComponent }) {
   const navItems = [
     { id: "home", label: "Home" },
@@ -9,42 +12,22 @@ function SidebarCV({ setActiveComponent, activeComponent }) {
   ];
 
   return (
-    <div className="flex flex-col gap-5 h-full text-black">
+    <div className="flex flex-col gap-5 h-full text-white">
       {/* Nama */}
       <div className="flex flex-col gap-2 p-4 font-mono">
         <p className="text-3xl font-medium">Rheyno Fernando</p>
-        <p className="text-sm font-medium">Full-Stack Developer</p>
+        <TextType
+          text={["Full-Stack Developer", "Data Science", "3D Modeling"]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+        />
       </div>
 
       {/* Tombol Navigasi */}
-      <div className="flex flex-col gap-3 text-sm font-semibold items-start  p-4">
-        {navItems.map((item) => (
-          <button
-            key={item.id}
-            onClick={() => setActiveComponent(item.id)}
-            className={`
-              relative group 
-              px-1 py-0.5 
-              transition-all duration-300 ease-in-out 
-              ${activeComponent === item.id
-                ? " translate-x-[-4px] translate-y-[-4px]"
-                : " hover:translate-x-[-4px] hover:translate-y-[-4px]"
-              }
-            `}
-          >
-            <span className="relative z-10">{item.label}</span>
-            <span
-              className={`
-                absolute left-0 -bottom-0.5 h-[2px] bg-black 
-                transition-all duration-300 ease-in-out
-                ${activeComponent === item.id
-                  ? "w-full"
-                  : "w-0 group-hover:w-full"
-                }
-              `}
-            ></span>
-          </button>
-        ))}
+      <div style={{ height: "600px", position: "relative" }}>
+        <FlowingMenu setActiveComponent={setActiveComponent} items={navItems} />
       </div>
     </div>
   );

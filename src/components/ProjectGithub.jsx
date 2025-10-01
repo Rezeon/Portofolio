@@ -8,6 +8,8 @@ import CMLABS from "../assets/cmlabs.png";
 import NextJs from "../assets/NextJs.png";
 import { motion } from "framer-motion";
 import * as ScrollArea from "@radix-ui/react-scroll-area";
+import StarBorder from "./StarBorder";
+import SpotlightCard from "./SpotlightCard";
 
 export default function ProjectGithub() {
   const projects = [
@@ -79,7 +81,10 @@ export default function ProjectGithub() {
           href: "https://github.com/Rezeon/ReactjsChill",
           label: "GitHub Repository",
         },
-        { href: "https://rezeon.github.io/ReactjsChill/", label: "Live Website" },
+        {
+          href: "https://rezeon.github.io/ReactjsChill/",
+          label: "Live Website",
+        },
       ],
     },
     {
@@ -137,7 +142,7 @@ export default function ProjectGithub() {
   ];
 
   return (
-    <div className="w-full mx-auto px-4 py-8 text-black font-mono">
+    <div className="w-full mx-auto px-4 py-8 text-white font-mono">
       <h2 className="text-3xl font-bold mb-3 text-center">My Projects</h2>
       <ScrollArea.Root className="w-full h-[70vh] overflow-hidden rounded-lg border border-white/20">
         <ScrollArea.Viewport className="w-full h-full p-4">
@@ -153,30 +158,35 @@ export default function ProjectGithub() {
                   ease: "easeOut",
                 }}
                 viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-lg rounded-lg shadow h-auto p-4 flex flex-col md:flex-row gap-4"
               >
-                <img
-                  src={project.img}
-                  alt={project.alt}
-                  className="w-full md:w-[30%] aspect-video rounded"
-                />
-                <div className="flex flex-col h-auto justify-between">
-                  <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-                  <p className="text-sm text-justify mb-4">{project.desc}</p>
-                  <div className="flex flex-wrap gap-3">
-                    {project.links.map((link, linkIdx) => (
-                      <a
-                        key={linkIdx}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 bg-black text-white rounded hover:bg-black/80 transition"
-                      >
-                        {link.label}
-                      </a>
-                    ))}
+                <SpotlightCard
+                  className="h-auto flex flex-col md:flex-row gap-4"
+                  spotlightColor="rgba(0, 229, 255, 0.2)"
+                >
+                  <img
+                    src={project.img}
+                    alt={project.alt}
+                    className="w-full md:w-[30%] aspect-video rounded"
+                  />
+
+                  <div className="flex flex-col h-auto justify-between">
+                    <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                    <p className="text-sm text-justify mb-4">{project.desc}</p>
+                    <div className="flex flex-wrap gap-3">
+                      {project.links.map((link, linkIdx) => (
+                        <StarBorder
+                          as="a"
+                          key={linkIdx}
+                          href={link.href}
+                          color="white"
+                          speed="5s"
+                        >
+                          {link.label}
+                        </StarBorder>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </SpotlightCard>
               </motion.div>
             ))}
           </div>
@@ -196,3 +206,4 @@ export default function ProjectGithub() {
     </div>
   );
 }
+

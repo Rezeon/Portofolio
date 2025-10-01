@@ -3,6 +3,7 @@ import BackendChill from "../assets/backend.png";
 import PreviewToDo from "../assets/todolist.png";
 import CatShop from "../assets/shop.png";
 import PreviewDataScience from "../assets/datascience.png";
+import feGo from "../assets/feGo.png";
 import CatMedia from "../assets/a.png";
 import CMLABS from "../assets/cmlabs.png";
 import NextJs from "../assets/NextJs.png";
@@ -14,16 +15,20 @@ import SpotlightCard from "./SpotlightCard";
 export default function ProjectGithub() {
   const projects = [
     {
-      img: PreviewToDo,
-      alt: "ToDo List Preview",
-      name: "ToDoList",
-      desc: `ToDoList is a simple and responsive task management web application built using HTML, CSS, and JavaScript. The app allows users to add, delete, and mark tasks as completed with a clean and intuitive interface.`,
+      img: feGo,
+      alt: "Chat app with golang",
+      name: "GoChat",
+      desc: `Chat with backend golang using postgresql, gorm, claudinary, websocket and gin, im using react for front end this project for proving if i can do full stack `,
       links: [
         {
-          href: "https://github.com/Rezeon/ToDoList",
-          label: "GitHub Repository",
+          href: "https://github.com/Rezeon/fe-chat",
+          label: "FrontEnd Repository",
         },
-        { href: "https://rezeon.github.io/ToDoList/", label: "Live Website" },
+        {
+          href: "https://github.com/Rezeon/go-ChatTime",
+          label: "BackEnd Repository",
+        },
+        { href: "https://fe-chat-taupe.vercel.app/", label: "Live Website" },
       ],
     },
     {

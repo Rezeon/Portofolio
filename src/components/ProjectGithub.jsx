@@ -1,10 +1,10 @@
 import PreviewChill from "../assets/webchil.png";
 import BackendChill from "../assets/backend.png";
-import PreviewToDo from "../assets/todolist.png";
 import CatShop from "../assets/shop.png";
 import PreviewDataScience from "../assets/datascience.png";
 import feGo from "../assets/feGo.png";
 import CatMedia from "../assets/a.png";
+import Furniture from "../assets/furniture.png";
 import CMLABS from "../assets/cmlabs.png";
 import NextJs from "../assets/NextJs.png";
 import { motion } from "framer-motion";
@@ -29,6 +29,23 @@ export default function ProjectGithub() {
           label: "BackEnd Repository",
         },
         { href: "https://fe-chat-taupe.vercel.app/", label: "Live Website" },
+      ],
+    },
+    {
+      img: Furniture,
+      alt: "Ecommerce with golang",
+      name: "Furniture shop",
+      desc: `i build ecommerce app using react and golang, for golang i using gin adn duitku for payment gateway, and claudinary for image`,
+      links: [
+        {
+          href: "https://github.com/Rezeon/Furniture-Shop",
+          label: "FrontEnd Repository",
+        },
+        {
+          href: "https://github.com/Rezeon/Furniture-shop-golang",
+          label: "BackEnd Repository",
+        },
+        { href: "https://furniture-shop-mu-lyart.vercel.app/", label: "Live Website" },
       ],
     },
     {
